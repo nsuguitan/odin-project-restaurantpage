@@ -1,0 +1,24 @@
+{
+  "name": "odin-project-restaurantpage",
+  "version": "1.0.0",
+  "description": "This is a module in the fullstack javascript learning path in the odin project, The task is to create a webpage for a restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsuguitan/odin-project-restaurantpage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsuguitan/odin-project-restaurantpage/issues"
+  },
+  "homepage": "https://github.com/nsuguitan/odin-project-restaurantpage#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
