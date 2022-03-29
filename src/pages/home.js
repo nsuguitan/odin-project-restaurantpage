@@ -1,7 +1,15 @@
 import _ from 'lodash';
 import '../style.css';
-import testPrint from './menu.js'
 
+function header(){
+    const element = document.createElement('div');
+    const title = document.createElement('h1');
+
+    title.innerHTML = 'Boba F&ecirc;te';
+    title.className = 'header';
+    element.appendChild(title);
+    return element;
+}
 function button() {
     const element = document.createElement('div');
     const btn = document.createElement('button');
@@ -16,4 +24,4 @@ function button() {
     return element;
 }
 
-document.body.appendChild(button())
+document.body.appendChild(header())
