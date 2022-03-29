@@ -4,7 +4,8 @@
   "description": "This is a module in the fullstack javascript learning path in the odin project, The task is to create a webpage for a restaurant",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,11 @@
   },
   "homepage": "https://github.com/nsuguitan/odin-project-restaurantpage#readme",
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
