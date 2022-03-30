@@ -1,10 +1,10 @@
-/* body {
+body {
     background-image: url("./images/background.jpg");
     display:flex;
     text-align: center;
     margin: auto;
     justify-content: center;
-} */
+} 
 
 .header{
     text-align: center;

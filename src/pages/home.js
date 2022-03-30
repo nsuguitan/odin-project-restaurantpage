@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import '../style.css';
 
+
 function header(){
     const element = document.createElement('div');
     const title = document.createElement('h1');
@@ -9,6 +10,10 @@ function header(){
     title.className = 'header';
     element.appendChild(title);
     return element;
+}
+
+function carousel(){
+
 }
 function button() {
     const element = document.createElement('div');
@@ -24,4 +29,4 @@ function button() {
     return element;
 }
 
-document.body.appendChild(header())
+document.getElementById("content").appendChild(header())

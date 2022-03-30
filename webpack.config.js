@@ -9,18 +9,22 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-        options: {
-            name: '/src/images/background.jpg'
-          }
-
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
+        {
+            test: /\.(png|jpe?g|gif)$/i,
+            type: 'asset/resource',
+              generator: {
+                filename: '../src/images/background.jpg',
+                filename: '../src/images/carousel1.jpeg',
+                filename: '../src/images/carousel2.jpeg',
+                filename: '../src/images/carousel3.jpeg',
+                filename: '../src/images/carousel4.jpeg',
+                filename: '../src/images/carousel5.jpeg',
+            },
+        },
+        {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+        },
     ],
   },
 };
