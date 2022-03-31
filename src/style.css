@@ -56,22 +56,27 @@ p{
 
 .farLeftImage{
     width: 100px;
+    opacity: .5;
 }
 
 .leftImage{
-    width: 100px;
+    width: 200px;
+    opacity: .7;
 }
 
 .centerImage{
     width: 300px;
+    opacity: 1;
 }
 
 .rightImage{
-    width: 100px;
+    width: 200px;
+    opacity: .7;
 }
 
 .farRightImage{
     width: 100px;
+    opacity: .5;
 }
 
 
