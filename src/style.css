@@ -6,13 +6,18 @@ body {
     justify-content: center;
 } 
 
+#navigation{
+    position: relative;
+    height: 50px;
+}
+
 .header{
     text-align: center;
     align-content: center;
     margin: auto;
     justify-content: center;
     position: relative; 
-    top: 50px;
+    height: 125px;
 }
 
 h1{
@@ -21,6 +26,53 @@ h1{
     font-size: 75px;
     text-align: center;
     margin: auto;
+}
+
+.paragraph{
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+}
+
+p{
+    color: whitesmoke;
+    font-family: 'Chalkduster';
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    line-height: 1.2;
+}
+
+#carousel{
+    position: relative;
+    height: 400px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+
+.farLeftImage{
+    width: 100px;
+}
+
+.leftImage{
+    width: 100px;
+}
+
+.centerImage{
+    width: 100px;
+}
+
+.rightImage{
+    width: 100px;
+}
+
+.farRightImage{
+    width: 100px;
 }
 
 
