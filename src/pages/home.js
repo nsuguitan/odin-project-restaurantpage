@@ -37,19 +37,26 @@ function intro(){
 
 function initCarousel(){
 
-    const element = document.createElement('div').setAttribute('id','carousel');
+    const element = document.createElement('div');
+    element.setAttribute('id','carousel');
 
-    let farLeftImage = document.createElement('img').setAttribute('class','farLeftImage');
-    let leftImage = document.createElement('img').setAttribute('class','leftImage');
-    let centerImage = document.createElement('img').setAttribute('class','centerImage');
-    let rightImage = document.createElement('img').setAttribute('class','rightImage');
-    let farRightImage = document.createElement('img').setAttribute('class','farRightImage');
+    let farLeftImage = document.createElement('img');
+    let leftImage = document.createElement('img');
+    let centerImage = document.createElement('img');
+    let rightImage = document.createElement('img');
+    let farRightImage = document.createElement('img');
     
-    farLeftImage.src = '../images/carousel1.jpeg';
-    leftImage.src = '../images/carousel2.jpeg';
-    centerImage.src = '../images/carousel3.jpeg';
-    rightImage.src = '../images/carousel4.jpeg';
-    farRightImage.src = '../images/carousel5.jpeg';
+    farLeftImage.setAttribute('class','farLeftImage');
+    leftImage.setAttribute('class','leftImage');
+    centerImage.setAttribute('class','centerImage');
+    rightImage.setAttribute('class','rightImage');
+    farRightImage.setAttribute('class','farRightImage');
+
+    farLeftImage.src = '../src/images/carousel1.jpeg';
+    leftImage.src = '../src/images/carousel2.jpeg';
+    centerImage.src = '../src/images/carousel3.jpeg';
+    rightImage.src = '../src/images/carousel4.jpeg';
+    farRightImage.src = '../src/images/carousel5.jpeg';
 
     element.appendChild(farLeftImage);
     element.appendChild(leftImage);
@@ -73,9 +80,11 @@ function button() {
     return element;
 }
 
+document.body.style.backgroundImage = "url('../src/images/background.jpg')";
 console.log("lets get this party started");
 document.getElementById("content").appendChild(header());
 console.log("header added");
 document.getElementById("content").appendChild(intro());
 console.log("paragraph added");
-//document.getElementById("content").appendChild(initCarousel());
+document.getElementById("content").appendChild(initCarousel());
+console.log("carousel added")

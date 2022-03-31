@@ -1,5 +1,4 @@
 body {
-    background-image: url("./images/background.jpg");
     display:flex;
     text-align: center;
     margin: auto;
@@ -64,7 +63,7 @@ p{
 }
 
 .centerImage{
-    width: 100px;
+    width: 300px;
 }
 
 .rightImage{
