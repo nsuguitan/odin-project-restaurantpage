@@ -49,15 +49,17 @@ p{
     position: relative;
     height: 400px;
     top: 50%;
+    width: 100%;
     transform: translateY(-50%);
     overflow: hidden;
+    justify-content: center;
 }
 
 
 .farLeftImage{
     width: 150px;
     opacity: .5;
-    left: 18%;
+    left: 22%;
     top:25%;
     position: absolute;
 }

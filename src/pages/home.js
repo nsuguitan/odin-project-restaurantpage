@@ -75,8 +75,9 @@ function initCarousel(){
     return element;
 }
 
-function moveToSelected(){
+function moveToSelected(element){
     console.log("carousel time!!!")
+    console.log("Element passed in:", element)
     let temp = [];
     temp.push(document.getElementsByClassName("farLeftImage")[0]);
     temp.push(document.getElementsByClassName("leftImage")[0]);
@@ -84,12 +85,12 @@ function moveToSelected(){
     temp.push(document.getElementsByClassName("rightImage")[0]);
     temp.push(document.getElementsByClassName("farRightImage")[0]);
     console.log(temp);
-    const selectedIndex = 1;//temp.indexOf(element);
+    const selectedIndex = temp.indexOf(element);
     console.log("index: ",selectedIndex);
     if(selectedIndex == 2){console.log("no change, selected in center")}
     else{
         console.log("selected element in array:",temp[selectedIndex]);
-        console.log("class name to be removed: ", temp[selectedIndex].className)
+        console.log("class name to be removed: ", temp[selectedIndex].className);
 
         temp[selectedIndex].setAttribute('class', 'centerImage');
         let leftImageIndex = selectedIndex - 1
@@ -111,6 +112,7 @@ function moveToSelected(){
 
         console.log("Yay! You moved selected image to center")
     }
+    return console.log("carousel moved!");
 }
 function button() {
     const element = document.createElement('div');
@@ -134,15 +136,15 @@ document.getElementById("content").appendChild(intro());
 console.log("paragraph added");
 document.getElementById("content").appendChild(initCarousel());
 console.log("carousel added");
-moveToSelected();
+//moveToSelected();
 // let img1 = document.getElementsByClassName("farLeftImage");
-// let img2 = document.getElementsByClassName("leftImage");
+ let img2=document.getElementsByClassName("leftImage")[0];
 // let img3 = document.getElementsByClassName("centerImage");
 // let img4 = document.getElementsByClassName("rightImage");
 // let img5 = document.getElementsByClassName("farRightImage");
 
 // img1.addEventListener('click',moveToSelected(img1))
-// img2.addEventListener('click',moveToSelected(img2))
+ img2.addEventListener('click',function(){moveToSelected(img2)});
 // img3.addEventListener('click',moveToSelected(img3))
 // img4.addEventListener('click',moveToSelected(img4))
 // img5.addEventListener('click',moveToSelected(img5))
