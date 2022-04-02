@@ -1,5 +1,7 @@
-import _ from 'lodash';
+import _, { isBuffer } from 'lodash';
 import '../style.css';
+
+//carousel vanilla javascript reference: https://codepen.io/tnobrega/pen/GYOywQ
 
 
 function header(){
@@ -52,6 +54,12 @@ function initCarousel(){
     rightImage.setAttribute('class','rightImage');
     farRightImage.setAttribute('class','farRightImage');
 
+    // farLeftImage.onclick = 'moveToSelected(farLeftImage)'
+    // leftImage.onclick = 'moveToSelected(leftImage)'
+    // centerImage.onclick = 'moveToSelected(centerImage)'
+    // rightImage.onclick = 'moveToSelected(rightImage)'
+    // farRightImage.onclick = 'moveToSelected(farRightImage)'
+
     farLeftImage.src = '../src/images/carousel1.jpeg';
     leftImage.src = '../src/images/carousel2.jpeg';
     centerImage.src = '../src/images/carousel3.jpeg';
@@ -65,6 +73,44 @@ function initCarousel(){
     element.appendChild(farRightImage);
 
     return element;
+}
+
+function moveToSelected(){
+    console.log("carousel time!!!")
+    let temp = [];
+    temp.push(document.getElementsByClassName("farLeftImage")[0]);
+    temp.push(document.getElementsByClassName("leftImage")[0]);
+    temp.push(document.getElementsByClassName("centerImage")[0]);
+    temp.push(document.getElementsByClassName("rightImage")[0]);
+    temp.push(document.getElementsByClassName("farRightImage")[0]);
+    console.log(temp);
+    const selectedIndex = 1;//temp.indexOf(element);
+    console.log("index: ",selectedIndex);
+    if(selectedIndex == 2){console.log("no change, selected in center")}
+    else{
+        console.log("selected element in array:",temp[selectedIndex]);
+        console.log("class name to be removed: ", temp[selectedIndex].className)
+
+        temp[selectedIndex].setAttribute('class', 'centerImage');
+        let leftImageIndex = selectedIndex - 1
+        if(selectedIndex == 0){leftImageIndex = 4}
+        console.log("next selected element in array:",temp[(leftImageIndex)]);
+        temp[(leftImageIndex)].setAttribute('class', 'leftImage');
+        let farLeftImageIndex = selectedIndex -2
+        if (farLeftImageIndex < 0){farLeftImageIndex = selectedIndex + 3}
+        console.log("3rd selected element in array:",temp[(farLeftImageIndex)]);
+        temp[farLeftImageIndex].setAttribute('class', 'farLeftImage');
+        
+        let farRightImageIndex = selectedIndex - 3
+        if(farRightImageIndex<0){farRightImageIndex = selectedIndex + 2}
+        console.log("4th selected element in array:",temp[(farRightImageIndex)]);
+        temp[farRightImageIndex].setAttribute('class', 'farRightImage');
+
+        console.log("5th selected element in array:",temp[(farRightImageIndex-1)]);
+        temp[farRightImageIndex-1].setAttribute('class', 'rightImage');
+
+        console.log("Yay! You moved selected image to center")
+    }
 }
 function button() {
     const element = document.createElement('div');
@@ -87,4 +133,16 @@ console.log("header added");
 document.getElementById("content").appendChild(intro());
 console.log("paragraph added");
 document.getElementById("content").appendChild(initCarousel());
-console.log("carousel added")
+console.log("carousel added");
+moveToSelected();
+// let img1 = document.getElementsByClassName("farLeftImage");
+// let img2 = document.getElementsByClassName("leftImage");
+// let img3 = document.getElementsByClassName("centerImage");
+// let img4 = document.getElementsByClassName("rightImage");
+// let img5 = document.getElementsByClassName("farRightImage");
+
+// img1.addEventListener('click',moveToSelected(img1))
+// img2.addEventListener('click',moveToSelected(img2))
+// img3.addEventListener('click',moveToSelected(img3))
+// img4.addEventListener('click',moveToSelected(img4))
+// img5.addEventListener('click',moveToSelected(img5))

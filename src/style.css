@@ -55,28 +55,39 @@ p{
 
 
 .farLeftImage{
-    width: 100px;
+    width: 150px;
     opacity: .5;
+    left: 18%;
+    top:25%;
+    position: absolute;
 }
 
 .leftImage{
     width: 200px;
     opacity: .7;
+    left: 35%;
+    top:90%;
 }
 
 .centerImage{
     width: 300px;
     opacity: 1;
+    left: 50%;
+    top:100%;
 }
 
 .rightImage{
     width: 200px;
     opacity: .7;
+    left: 60%;
+    top: 90%;
 }
 
 .farRightImage{
-    width: 100px;
+    width: 150px;
     opacity: .5;
+    left: 68%;
+    top:88%;
 }
 
 
