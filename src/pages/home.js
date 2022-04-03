@@ -124,6 +124,25 @@ function updateImages(){
     img4 = document.getElementsByClassName("rightImage")[0];
     img5 = document.getElementsByClassName("farRightImage")[0];
 }
+function operationHours(){
+    const element = document.createElement('div');
+    element.setAttribute('class','chalk-border-paragraph');
+    const para = document.createElement('p');
+    const br = document.createElement('br');
+    const node1 = document.createTextNode("Sunday: Closed");
+    const node2 = document.createTextNode("Monday-Friday: 10AM-9PM");
+    const node3 = document.createTextNode("Saturday: 10AM-Midnight");
+    
+    para.appendChild(node1);
+    para.appendChild(br.cloneNode(true));
+    para.appendChild(node2);
+    para.appendChild(br.cloneNode(true));
+    para.appendChild(node3);
+
+    element.appendChild(para);
+
+    return element;
+}
 
 document.body.style.backgroundImage = "url('../src/images/background.jpg')";
 console.log("lets get this party started");
@@ -133,6 +152,7 @@ document.getElementById("content").appendChild(intro());
 console.log("paragraph added");
 document.getElementById("content").appendChild(initCarousel());
 console.log("carousel added");
+document.getElementById("content").append(operationHours());
 //moveToSelected();
 let img1 = document.getElementsByClassName("farLeftImage")[0];
 let img2=document.getElementsByClassName("leftImage")[0];

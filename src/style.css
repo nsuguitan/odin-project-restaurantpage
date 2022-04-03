@@ -92,4 +92,17 @@ p{
     top:88%;
 }
 
+.chalk-border-paragraph {
+    border: 25px solid rgba(255,255,255,.8);
+    border-image: url("https://www.unicefusa.org/sites/default/files/answer-box.png") 20;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    justify-content: center;
+    position: fixed;
+    left: 30%;
+    bottom:10px;
+    width: 40%;
+  }
+
 
