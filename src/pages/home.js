@@ -97,6 +97,7 @@ function moveToSelected(element){
         if(selectedIndex == 0){leftImageIndex = 4}
         console.log("next selected element in array:",temp[(leftImageIndex)]);
         temp[(leftImageIndex)].setAttribute('class', 'leftImage');
+
         let farLeftImageIndex = selectedIndex -2
         if (farLeftImageIndex < 0){farLeftImageIndex = selectedIndex + 3}
         console.log("3rd selected element in array:",temp[(farLeftImageIndex)]);
@@ -107,25 +108,21 @@ function moveToSelected(element){
         console.log("4th selected element in array:",temp[(farRightImageIndex)]);
         temp[farRightImageIndex].setAttribute('class', 'farRightImage');
 
-        console.log("5th selected element in array:",temp[(farRightImageIndex-1)]);
-        temp[farRightImageIndex-1].setAttribute('class', 'rightImage');
+        let rightImageIndex = farRightImageIndex - 1
+        if(rightImageIndex < 0){rightImageIndex = 4}
+        console.log("5th selected element in array:",temp[rightImageIndex]);
+        temp[rightImageIndex].setAttribute('class', 'rightImage');
 
         console.log("Yay! You moved selected image to center")
     }
     return console.log("carousel moved!");
 }
-function button() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
-
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    btn.innerHTML = 'Click then check console';
-    btn.onclick = testPrint;
-
-    element.appendChild(btn)
-
-    return element;
+function updateImages(){
+    img1 = document.getElementsByClassName("farLeftImage")[0];
+    img2=document.getElementsByClassName("leftImage")[0];
+    img3 = document.getElementsByClassName("centerImage")[0];
+    img4 = document.getElementsByClassName("rightImage")[0];
+    img5 = document.getElementsByClassName("farRightImage")[0];
 }
 
 document.body.style.backgroundImage = "url('../src/images/background.jpg')";
@@ -137,14 +134,14 @@ console.log("paragraph added");
 document.getElementById("content").appendChild(initCarousel());
 console.log("carousel added");
 //moveToSelected();
-// let img1 = document.getElementsByClassName("farLeftImage");
- let img2=document.getElementsByClassName("leftImage")[0];
-// let img3 = document.getElementsByClassName("centerImage");
-// let img4 = document.getElementsByClassName("rightImage");
-// let img5 = document.getElementsByClassName("farRightImage");
+let img1 = document.getElementsByClassName("farLeftImage")[0];
+let img2=document.getElementsByClassName("leftImage")[0];
+let img3 = document.getElementsByClassName("centerImage")[0];
+let img4 = document.getElementsByClassName("rightImage")[0];
+let img5 = document.getElementsByClassName("farRightImage")[0];
 
-// img1.addEventListener('click',moveToSelected(img1))
- img2.addEventListener('click',function(){moveToSelected(img2)});
-// img3.addEventListener('click',moveToSelected(img3))
-// img4.addEventListener('click',moveToSelected(img4))
-// img5.addEventListener('click',moveToSelected(img5))
+img1.addEventListener('click',function(){moveToSelected(img1), updateImages()});
+img2.addEventListener('click',function(){moveToSelected(img2), updateImages()});
+img3.addEventListener('click',function(){moveToSelected(img3), updateImages()});
+img4.addEventListener('click',function(){moveToSelected(img4), updateImages()});
+img5.addEventListener('click',function(){moveToSelected(img5), updateImages()});
