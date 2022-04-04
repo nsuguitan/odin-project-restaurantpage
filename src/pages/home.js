@@ -144,6 +144,8 @@ function operationHours(){
     return element;
 }
 
+export default function createHomePage(){
+console.log("Running Create Homepage");
 document.body.style.backgroundImage = "url('../src/images/background.jpg')";
 console.log("lets get this party started");
 document.getElementById("content").appendChild(header());
@@ -165,3 +167,5 @@ img2.addEventListener('click',function(){moveToSelected(img2), updateImages()});
 img3.addEventListener('click',function(){moveToSelected(img3), updateImages()});
 img4.addEventListener('click',function(){moveToSelected(img4), updateImages()});
 img5.addEventListener('click',function(){moveToSelected(img5), updateImages()});
+
+}
