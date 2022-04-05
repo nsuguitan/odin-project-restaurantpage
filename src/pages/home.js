@@ -83,44 +83,51 @@ function moveToSelected(element){
     temp.push(document.getElementsByClassName("rightImage")[0]);
     temp.push(document.getElementsByClassName("farRightImage")[0]);
     console.log(temp);
-    const selectedIndex = temp.indexOf(element);
-    console.log("index: ",selectedIndex);
-    if(selectedIndex == 2){console.log("no change, selected in center")}
-    else{
-        console.log("selected element in array:",temp[selectedIndex]);
-        console.log("class name to be removed: ", temp[selectedIndex].className);
+    const newFirstIndex = (temp.indexOf(element) + 3) % 5;
+    let newImageOrder = temp.slice(newFirstIndex).concat(temp.slice(0, newFirstIndex))
 
-        temp[selectedIndex].setAttribute('class', 'centerImage');
-        let leftImageIndex = selectedIndex - 1
-        if(selectedIndex == 0){leftImageIndex = 4}
-        console.log("next selected element in array:",temp[(leftImageIndex)]);
-        temp[(leftImageIndex)].setAttribute('class', 'leftImage');
+    newImageOrder[0].setAttribute('class','farLeftImage')
+    newImageOrder[1].setAttribute('class','leftImage')
+    newImageOrder[2].setAttribute('class','centerImage')
+    newImageOrder[3].setAttribute('class','rightImage')
+    newImageOrder[4].setAttribute('class','farRightImage')
+    // console.log("index: ",selectedIndex);
+    // if(selectedIndex == 2){console.log("no change, selected in center")}
+    // else{
+    //     console.log("selected element in array:",temp[selectedIndex]);
+    //     console.log("class name to be removed: ", temp[selectedIndex].className);
 
-        let farLeftImageIndex = selectedIndex -2
-        if (farLeftImageIndex < 0){farLeftImageIndex = selectedIndex + 3}
-        console.log("3rd selected element in array:",temp[(farLeftImageIndex)]);
-        temp[farLeftImageIndex].setAttribute('class', 'farLeftImage');
+    //     temp[selectedIndex].setAttribute('class', 'centerImage');
+    //     let leftImageIndex = selectedIndex - 1
+    //     if(selectedIndex == 0){leftImageIndex = 4}
+    //     console.log("next selected element in array:",temp[(leftImageIndex)]);
+    //     temp[(leftImageIndex)].setAttribute('class', 'leftImage');
+
+    //     let farLeftImageIndex = selectedIndex -2
+    //     if (farLeftImageIndex < 0){farLeftImageIndex = selectedIndex + 3}
+    //     console.log("3rd selected element in array:",temp[(farLeftImageIndex)]);
+    //     temp[farLeftImageIndex].setAttribute('class', 'farLeftImage');
         
-        let farRightImageIndex = selectedIndex - 3
-        if(farRightImageIndex<0){farRightImageIndex = selectedIndex + 2}
-        console.log("4th selected element in array:",temp[(farRightImageIndex)]);
-        temp[farRightImageIndex].setAttribute('class', 'farRightImage');
+    //     let farRightImageIndex = selectedIndex - 3
+    //     if(farRightImageIndex<0){farRightImageIndex = selectedIndex + 2}
+    //     console.log("4th selected element in array:",temp[(farRightImageIndex)]);
+    //     temp[farRightImageIndex].setAttribute('class', 'farRightImage');
 
-        let rightImageIndex = farRightImageIndex - 1
-        if(rightImageIndex < 0){rightImageIndex = 4}
-        console.log("5th selected element in array:",temp[rightImageIndex]);
-        temp[rightImageIndex].setAttribute('class', 'rightImage');
+    //     let rightImageIndex = farRightImageIndex - 1
+    //     if(rightImageIndex < 0){rightImageIndex = 4}
+    //     console.log("5th selected element in array:",temp[rightImageIndex]);
+    //     temp[rightImageIndex].setAttribute('class', 'rightImage');
 
-        console.log("Yay! You moved selected image to center")
-    }
-    return console.log("carousel moved!");
+    //     console.log("Yay! You moved selected image to center")
+    // }
+    // return console.log("carousel moved!");
 }
 function updateImages(){
-    img1 = document.getElementsByClassName("farLeftImage")[0];
-    img2=document.getElementsByClassName("leftImage")[0];
-    img3 = document.getElementsByClassName("centerImage")[0];
-    img4 = document.getElementsByClassName("rightImage")[0];
-    img5 = document.getElementsByClassName("farRightImage")[0];
+    globalThis.img1 = document.getElementsByClassName("farLeftImage")[0];
+    globalThis.img2 = document.getElementsByClassName("leftImage")[0];
+    globalThis.img3 = document.getElementsByClassName("centerImage")[0];
+    globalThis.img4 = document.getElementsByClassName("rightImage")[0];
+    globalThis.img5 = document.getElementsByClassName("farRightImage")[0];
 }
 function operationHours(){
     const element = document.createElement('div');
@@ -155,7 +162,7 @@ console.log("carousel added");
 document.getElementById("content").append(operationHours());
 //moveToSelected();
 let img1 = document.getElementsByClassName("farLeftImage")[0];
-let img2=document.getElementsByClassName("leftImage")[0];
+let img2 = document.getElementsByClassName("leftImage")[0];
 let img3 = document.getElementsByClassName("centerImage")[0];
 let img4 = document.getElementsByClassName("rightImage")[0];
 let img5 = document.getElementsByClassName("farRightImage")[0];

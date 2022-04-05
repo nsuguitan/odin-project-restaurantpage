@@ -62,7 +62,7 @@ p{
 #carousel{
     position: relative;
     height: 400px;
-    top: 50%;
+    top: 35%;
     width: 100%;
     transform: translateY(-50%);
     overflow: hidden;
@@ -73,7 +73,7 @@ p{
 .farLeftImage{
     width: 150px;
     opacity: .5;
-    left: 22%;
+    left: 22vw;
     top:25%;
     position: absolute;
 }
@@ -81,28 +81,28 @@ p{
 .leftImage{
     width: 200px;
     opacity: .7;
-    left: 35%;
+    left: 35vw;
     top:90%;
 }
 
 .centerImage{
     width: 300px;
     opacity: 1;
-    left: 50%;
+    left: 50vw;
     top:100%;
 }
 
 .rightImage{
     width: 200px;
     opacity: .7;
-    left: 60%;
+    left: 60vw;
     top: 90%;
 }
 
 .farRightImage{
     width: 150px;
     opacity: .5;
-    left: 68%;
+    left: 68vw;
     top:88%;
 }
 
