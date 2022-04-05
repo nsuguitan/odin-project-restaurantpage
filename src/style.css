@@ -157,7 +157,7 @@ p{
   }
 
 .grid2x2 {
-min-height: 90%;
+min-height: 80%;
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
