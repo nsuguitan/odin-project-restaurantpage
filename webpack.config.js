@@ -19,6 +19,7 @@ module.exports = {
                 filename: '../src/images/carousel3.jpeg',
                 filename: '../src/images/carousel4.jpeg',
                 filename: '../src/images/carousel5.jpeg',
+                filename: '../src/images/blacktea.png',
             },
         },
         {

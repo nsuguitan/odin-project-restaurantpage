@@ -39,6 +39,7 @@ function navbar(){
 
 function clearPage(){
     document.getElementById("content").innerHTML = "";
+    document.getElementById("content").appendChild(navbar());
 }
 
 console.log("Hello Cruel World")
@@ -46,6 +47,5 @@ document.getElementById("content").appendChild(navbar());
 createHomePage();
 console.log("Homepage created")
 
-//let menuTab = document.getElementById("menu");
-
-//menuTab.addEventListener('click',function(){clearPage();createMenuPage()});
+let menuTab = document.getElementById("menu");
+menuTab.addEventListener('click',function(){clearPage(), createMenuPage()});
