@@ -73,37 +73,44 @@ p{
 .farLeftImage{
     width: 150px;
     opacity: .5;
-    left: 22vw;
+    left: 24vw;
     top:25%;
     position: absolute;
 }
 
 .leftImage{
     width: 200px;
-    opacity: .7;
-    left: 35vw;
-    top:90%;
+    opacity: .9;
+    left: 30vw;
+    top:20%;
+    z-index: 1;
+    position: absolute;
 }
 
 .centerImage{
     width: 300px;
     opacity: 1;
-    left: 50vw;
-    top:100%;
+    left: 40vw;
+    top: 12%;
+    z-index: 2;
+    position: absolute;
 }
 
 .rightImage{
     width: 200px;
-    opacity: .7;
-    left: 60vw;
-    top: 90%;
+    opacity: .9;
+    left: 55vw;
+    top: 20%;
+    z-index: 1;
+    position: absolute;
 }
 
 .farRightImage{
     width: 150px;
     opacity: .5;
-    left: 68vw;
-    top:88%;
+    left: 62vw;
+    top: 25%;
+    position: absolute;
 }
 
 .chalk-border-paragraph {
