@@ -1,5 +1,3 @@
-import _, { isBuffer } from 'lodash';
-import '../style.css';
 
 //carousel vanilla javascript reference: https://codepen.io/tnobrega/pen/GYOywQ
 

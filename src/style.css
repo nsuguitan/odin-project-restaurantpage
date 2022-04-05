@@ -1,3 +1,7 @@
+#content {
+    width: 100%;
+}
+
 body {
     display:flex;
     text-align: center;
@@ -8,7 +12,8 @@ body {
 #navigation{
     position: relative;
     height: 50px;
-    justify-content: center;
+    justify-content: left;
+    width: 100%;
 }
 
 li{
@@ -144,27 +149,60 @@ p{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-  .grid2x2 {
-    min-height: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+.grid2x2 {
+min-height: 90%;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
 
-  .grid2x2 > div {
-    display: flex; 
-    flex-basis: calc(50% - 40px);  
+.grid2x2 > div {
+display: flex; 
+flex-basis: calc(50% - 40px);  
+justify-content: center;
+flex-direction: column;
+}
+
+.grid2x2 > div > div {
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+
+h3 {
+text-decoration: underline overline;
+text-underline-offset: 3px;
+}
+
+#bobaFett img {
+border-radius: 50%;
+border:5px solid black;
+}
+
+.card {
+width: 100%;
+height: 100%; 
+justify-content: right;
+display: inline-block; 
+}
+
+.card-body{
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
-  }
 
-  .grid2x2 > div > div {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-  }
+}
 
-  h3 {
-    text-decoration: underline overline;
-    text-underline-offset: 3px;
-  }
+#employeeInfoTitle {
+    color: black;
+}
+
+#employeeInfoParagraph {
+color: black;
+}
+
+.card-columns {
+column-count: 1;
+}

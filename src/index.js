@@ -1,7 +1,7 @@
-import _ from 'lodash';
 import './style.css';
 import createHomePage from './pages/home.js';
 import createMenuPage from './pages/menu.js';
+import createContactPage from './pages/contact.js';
 
 
 function navbar(){
@@ -20,7 +20,7 @@ function navbar(){
     listElement2.setAttribute('class','nav-item');
     listElement2.innerHTML = 'Menu'
     const listElement3 = document.createElement('li');
-    listElement3.setAttribute('id','contactUs');
+    listElement3.setAttribute('id','contact');
     listElement3.setAttribute('class','nav-item');
     listElement3.innerHTML = 'Contact Us'
 
@@ -40,12 +40,18 @@ function navbar(){
 function clearPage(){
     document.getElementById("content").innerHTML = "";
     document.getElementById("content").appendChild(navbar());
+    let homeTab = document.getElementById("home");
+    homeTab.addEventListener('click',function(){clearPage(), createHomePage()})
+
+    let menuTab = document.getElementById("menu");
+    menuTab.addEventListener('click',function(){clearPage(), createMenuPage()});
+
+    let contactTab = document.getElementById("contact");
+    contactTab.addEventListener('click',function(){clearPage(), createContactPage()});
 }
 
 console.log("Hello Cruel World")
-document.getElementById("content").appendChild(navbar());
+clearPage();
 createHomePage();
 console.log("Homepage created")
 
-let menuTab = document.getElementById("menu");
-menuTab.addEventListener('click',function(){clearPage(), createMenuPage()});
